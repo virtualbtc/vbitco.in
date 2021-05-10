@@ -4,7 +4,7 @@
   },
   "dependencies": {
     "@hanul/skynode": "^0.0.1",
-    "ethers": "^5.0.32",
+    "ethers": "^5.1.4",
     "less": "^4.1.1",
     "skyutil": "^0.0.1"
   },
