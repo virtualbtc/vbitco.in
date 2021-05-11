@@ -1,0 +1,224 @@
+/*
+https://github.com/Hanul/sky-css-base
+v0.0.1 | 20210109
+Author: Sim Young Jae
+License: MIT
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*,
+*:focus {
+  outline: 0;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+a,
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  cursor: pointer;
+}
+button,
+input {
+  border: none;
+}
+[hidden] {
+  display: none !important;
+}
+[contenteditable] {
+  -webkit-tap-highlight-color: transparent;
+}
+.float-wrapper:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@font-face {
+  font-family: "DOSMyungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: #222222;
+  color: #f2f2f2;
+}
+a {
+  color: #ff7324;
+  text-decoration: none;
+}
+body > header {
+  background-image: url("/images/background.png");
+  border-bottom: 4px solid #000000;
+  display: flex;
+  align-items: center;
+}
+body > header h1 a {
+  display: flex;
+  color: #f2f2f2;
+  font-family: "DOSMyungjo";
+  font-size: 28px;
+  line-height: 34px;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+body > header h1 a img {
+  height: 32px;
+  margin-right: 10px;
+}
+body > header nav {
+  display: flex;
+}
+body > header nav a {
+  padding: 8px;
+  margin-left: 24px;
+  color: #f2f2f2;
+}
+body > header nav a:hover {
+  color: #ff7324;
+}
+main h2 {
+  font-size: 32px;
+  padding: 25px 0;
+}
+main h3 {
+  font-size: 24px;
+  padding: 25px 0;
+}
+main p {
+  color: #b2b2b2;
+  font-size: 16px;
+}
+
