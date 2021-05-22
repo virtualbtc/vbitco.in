@@ -1,3 +1,4 @@
+@import url(https://rsms.me/inter/inter.css);
 /*
 https://github.com/Hanul/sky-css-base
 v0.0.1 | 20210109
@@ -174,16 +175,27 @@ input {
 body {
   background-color: #222222;
   color: #f2f2f2;
+  font-family: "Inter var", sans-serif;
+  line-height: 1.6;
 }
 a {
   color: #ff7324;
   text-decoration: none;
+}
+ul {
+  list-style-type: square;
+  margin-left: 30px;
 }
 body > header {
   background-image: url("/images/background.png");
   border-bottom: 4px solid #000000;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 719px) {
+  body > header {
+    display: block;
+  }
 }
 body > header h1 a {
   display: flex;
@@ -198,8 +210,14 @@ body > header h1 a img {
   height: 32px;
   margin-right: 10px;
 }
+@media only screen and (max-width: 719px) {
+  body > header h1 a {
+    padding: 15px 22px;
+  }
+}
 body > header nav {
   display: flex;
+  flex-grow: 1;
 }
 body > header nav a {
   padding: 8px;
@@ -209,16 +227,61 @@ body > header nav a {
 body > header nav a:hover {
   color: #ff7324;
 }
+body > header nav a.lang {
+  margin-left: auto;
+  margin-right: 24px;
+}
+@media only screen and (max-width: 719px) {
+  body > header nav {
+    display: block;
+  }
+  body > header nav a {
+    display: block;
+    margin-left: 20px;
+  }
+  body > header nav a.lang {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+}
+main {
+  padding: 30px;
+}
+@media only screen and (max-width: 719px) {
+  main {
+    padding: 20px;
+  }
+}
 main h2 {
   font-size: 32px;
   padding: 25px 0;
+}
+@media only screen and (max-width: 719px) {
+  main h2 {
+    font-size: 28px;
+    padding: 15px 0;
+  }
 }
 main h3 {
   font-size: 24px;
   padding: 25px 0;
 }
+@media only screen and (max-width: 719px) {
+  main h3 {
+    font-size: 22px;
+    padding: 15px 0;
+  }
+}
 main p {
   color: #b2b2b2;
   font-size: 16px;
+}
+footer {
+  padding: 30px;
+}
+@media only screen and (max-width: 719px) {
+  footer {
+    padding: 20px;
+  }
 }
 

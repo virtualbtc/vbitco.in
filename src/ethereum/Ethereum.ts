@@ -1,8 +1,9 @@
 import { ethers } from "ethers";
+import EventContainer from "eventcontainer";
 import Config from "../Config";
 import VirtualBitcoinContract from "./VirtualBitcoinContract";
 
-class Ethereum {
+class Ethereum extends EventContainer {
 
     public provider = new ethers.providers.WebSocketProvider(Config.PROVIDER_URL);
 
@@ -15,14 +16,17 @@ class Ethereum {
     public web3Signer!: ethers.providers.JsonRpcSigner;
 
     constructor() {
+        super();
         if (this.existsWeb3Provider === true) {
             this.web3Provider = new ethers.providers.Web3Provider(this.ethereum);
+            this.ethereum.on("chainChanged", () => {
+                location.reload();
+            });
         }
     }
 
-    public async getNetwork() {
-        return await this.provider.getNetwork();
-    }
+    public async getNetwork() { return await this.provider.getNetwork(); }
+    public async getWeb3Network() { return await this.web3Provider.getNetwork(); }
 
     public async connected() {
 

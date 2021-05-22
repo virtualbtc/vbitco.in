@@ -1,8 +1,19 @@
 import { BigNumber } from "@ethersproject/bignumber";
-import Config from "./Config";
+import Config from "../Config";
 import SmartContract from "./SmartContract";
 
+export interface PizzaStruct {
+    owner: string;
+    power: BigNumber;
+    minedBlock: BigNumber;
+    accSubsidy: BigNumber;
+}
+
 class VirtualBitcoinContract extends SmartContract {
+
+    public name = "Virtual Bitcoin";
+    public symbol = "VBTC";
+    public decimals = 8;
 
     constructor() {
         super(
@@ -22,9 +33,6 @@ class VirtualBitcoinContract extends SmartContract {
         ]);
     }
 
-    public async getName(): Promise<string> { return await this.contract.name(); }
-    public async getSymbol(): Promise<string> { return await this.contract.symbol(); }
-    public async getDecimals(): Promise<number> { return await this.contract.decimals(); }
     public async getTotalSupply(): Promise<BigNumber> { return await this.contract.totalSupply(); }
 
     public async balanceOf(owner: string): Promise<BigNumber> {
@@ -48,6 +56,8 @@ class VirtualBitcoinContract extends SmartContract {
     }
 
     public async getPizzaPrice(power: BigNumber): Promise<BigNumber> { return await this.contract.pizzaPrice(power); }
+    public async getPizzaCount(): Promise<BigNumber> { return await this.contract.pizzaCount(); }
+    public async getPizza(pizzaId: BigNumber): Promise<PizzaStruct> { return await this.contract.pizzas(pizzaId); }
 
     public async buyPizza(power: BigNumber): Promise<BigNumber> {
         return await this.web3Contract.buyPizza(power);
