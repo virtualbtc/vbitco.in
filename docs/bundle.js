@@ -16,7 +16,7 @@
   \*********************/
 /***/ (() => {
 
-eval("\r\n\n\n//# sourceURL=webpack:///./src/main.ts?");
+eval("\r\nconst nav = document.querySelector(\"nav\");\r\ndocument.querySelector(\".menu-button\").addEventListener(\"click\", () => {\r\n    if (nav.style.display === \"block\") {\r\n        nav.style.display = \"none\";\r\n    }\r\n    else {\r\n        nav.style.display = \"block\";\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack:///./src/main.ts?");
 
 /***/ })
 

@@ -197,6 +197,14 @@ body > header {
     display: block;
   }
 }
+body > header h1:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
 body > header h1 a {
   display: flex;
   color: #f2f2f2;
@@ -206,14 +214,37 @@ body > header h1 a {
   padding: 15px 30px;
   text-decoration: none;
 }
+@media only screen and (max-width: 719px) {
+  body > header h1 a {
+    float: left;
+  }
+}
 body > header h1 a img {
   height: 32px;
   margin-right: 10px;
 }
 @media only screen and (max-width: 719px) {
   body > header h1 a {
-    padding: 15px 22px;
+    padding: 13px 0 13px 15px;
+    font-size: 26px;
   }
+  body > header h1 a img {
+    height: 30px;
+  }
+}
+body > header h1 .menu-button {
+  display: none;
+  padding: 15px;
+}
+@media only screen and (max-width: 719px) {
+  body > header h1 .menu-button {
+    display: block;
+    float: right;
+  }
+}
+body > header h1 .menu-button img {
+  display: block;
+  width: 30px;
 }
 body > header nav {
   display: flex;
@@ -233,7 +264,7 @@ body > header nav a.lang {
 }
 @media only screen and (max-width: 719px) {
   body > header nav {
-    display: block;
+    display: none;
   }
   body > header nav a {
     display: block;

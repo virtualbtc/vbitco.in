@@ -37,6 +37,8 @@ body>header {
     }
 
     h1 {
+        .float-wrapper();
+
         a {
             display        : flex;
             color          : rgb(242, 242, 242);
@@ -46,13 +48,37 @@ body>header {
             padding        : 15px 30px;
             text-decoration: none;
 
+            @media @phone {
+                float: left;
+            }
+
             img {
                 height      : 32px;
                 margin-right: 10px;
             }
 
             @media @phone {
-                padding: 15px 22px;
+                padding  : 13px 0 13px 15px;
+                font-size: 26px;
+
+                img {
+                    height: 30px;
+                }
+            }
+        }
+
+        .menu-button {
+            display: none;
+            padding: 15px;
+
+            @media @phone {
+                display: block;
+                float  : right;
+            }
+
+            img {
+                display: block;
+                width  : 30px;
             }
         }
     }
@@ -77,7 +103,7 @@ body>header {
         }
 
         @media @phone {
-            display: block;
+            display: none;
 
             a {
                 display    : block;
